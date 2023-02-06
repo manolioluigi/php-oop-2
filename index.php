@@ -1,5 +1,8 @@
 <?php
-
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    include __DIR__ . '/database.php'
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +19,29 @@
 </head>
 <body>
     
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
 
+                <!--card cibo-->
+                <?php foreach ($foodArray as $item){ ?>
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<?php echo $item->image ?>" alt="Card image cap">
+                        <h1><?php echo $item->title ?></h1>
+                        <div class="card-body">
+                            <p class="card-text"><?php echo $item->price ?></p>
+                            <p class="card-text"><?php echo $item->category ?></p>
+                            <p class="card-text"><?php echo $item->weight ?></p>
+                            <p class="card-text"><?php echo $item->ingredients ?></p>
+                        </div>
+                    </div>
+
+                <?php } ?>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <?php
-    include __DIR__ . './Models/AllProducts.php';
-    include __DIR__ . './Models/AnimalFood.php';
-    include __DIR__ . './Models/AnimalAccessory.php';
-    include __DIR__ . './Models/AnimalGame.php';
+    include __DIR__ . './Models/product.php';
+    include __DIR__ . './Models/food.php';
+    include __DIR__ . './Models/kennel.php';
+    include __DIR__ . './Models/toy.php';
 
     //food
     $food1 = new food("https://m.media-amazon.com/images/I/71fwkZg9m6L._AC_SY679_.jpg", "Royal Canin Mini Adult", "€ 43,99", "Cane", "545g", "prosciutto, riso");
