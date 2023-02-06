@@ -1,13 +1,13 @@
 <?php
     class toy extends product
     {
-        public $material;
+        public $desc;
         public $size;
 
-        public function __construct($image, $title, $price, $category, $material, $size)
+        public function __construct($image, $title, $price, $category, $desc, $size)
         {
             parent::__construct($image, $title, $price, $category);
-            $this->material = $material;
+            $this->desc = $desc;
             $this->size = $size;
         }
     }
