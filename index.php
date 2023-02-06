@@ -19,25 +19,81 @@
 </head>
 <body>
     
-    <div class="container-fluid">
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-12">
+                <div>
+                    <h2 class="mx-3">Boolshop</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h4 class="mx-3">I nostri prodotti:</h4>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
 
-                <!--card cibo-->
-                <?php foreach ($foodArray as $item){ ?>
+                <div class="card-container d-flex flex-wrap">
 
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="<?php echo $item->image ?>" alt="Card image cap">
-                        <h1><?php echo $item->title ?></h1>
-                        <div class="card-body">
-                            <p class="card-text"><?php echo $item->price ?></p>
-                            <p class="card-text"><?php echo $item->category ?></p>
-                            <p class="card-text"><?php echo $item->weight ?></p>
-                            <p class="card-text"><?php echo $item->ingredients ?></p>
+                    <!--card cibo-->
+                    <?php foreach ($foodArray as $item){ ?>
+
+                        <div class="card m-3 card-size">
+                            <div class="card-img-container">
+                                <img class="card-img-top" src="<?php echo $item->image ?>" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h1><?php echo $item->title ?></h1>
+                                <p class="card-text"><?php echo $item->category ?></p>
+                                <p class="card-text"><?php echo $item->price ?></p>
+                                <p class="card-text"><?php echo $item->weight ?></p>
+                                <span class="card-text"><?php echo $item->ingredients ?></span>
+                            </div>
                         </div>
-                    </div>
 
-                <?php } ?>
+                    <?php } ?>
+
+                    <!--card kennel-->
+                    <?php foreach ($kennelArray as $item){ ?>
+
+                        <div class="card m-3 card-size">
+                            <div class="card-img-container">
+                                <img class="card-img-top" src="<?php echo $item->image ?>" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h1><?php echo $item->title ?></h1>
+                                <p class="card-text"><?php echo $item->category ?></p>
+                                <p class="card-text"><?php echo $item->price ?></p>
+                                <p class="card-text"><?php echo $item->material ?></p>
+                                <p class="card-text"><?php echo $item->size ?></p>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+
+                    <!--card toy-->
+                    <?php foreach ($toyArray as $item){ ?>
+
+                        <div class="card m-3 card-size">
+                            <div class="card-img-container">
+                                <img class="card-img-top" src="<?php echo $item->image ?>" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h1><?php echo $item->title ?></h1>
+                                <p class="card-text"><?php echo $item->price ?></p>
+                                <p class="card-text"><?php echo $item->category ?></p>
+                                <p class="card-text"><?php echo $item->desc ?></p>
+                                <p class="card-text"><?php echo $item->size ?></p>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+
+                </div>
 
             </div>
         </div>
