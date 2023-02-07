@@ -20,4 +20,17 @@
     $toy1 = new toy("https://www.naturepetshop.it/wp-content/uploads/T1_1_1000x1000.jpg", "Kong Classic", "13,49", "Cane", "Galleggia e rimbalza", "8,5 x 10 cm");
     $toy2 = new toy("https://cdn.shopify.com/s/files/1/0615/2159/2563/products/set-di-6-topolini-in-peluche-trixie-trixie-4011905045030-37712487121139_512x512.jpg?v=1657704965", "Topini di peluche Trixie", "4,99", "Gatto", "Morbido con codina in corda", "8,5 cm x 10 cm");
     $toyArray = [$toy1, $toy2];
+
+    //funzione icone
+    function getIcons($item){
+        if($item == 'Cane'){
+            return '<i class="fa-solid fa-dog"></i>';
+        }elseif($item == 'Gatto'){
+            return '<i class="fa-solid fa-cat"></i>';
+        }elseif($item == 'Pesce'){
+            return '<i class="fa-solid fa-fish"></i>';
+        }elseif($item == 'Uccello'){
+            return '<i class="fa-solid fa-dove"></i>';
+        }
+    } 
 ?>
